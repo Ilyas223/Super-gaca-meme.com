@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#reward {
+    font-size: 24px;
+    margin: 20px;
+}
+
+#leaderboard {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leaderboard li {
+    font-size: 18px;
+    margin: 5px 0;
+}
