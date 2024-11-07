@@ -4,7 +4,7 @@ const rewards = [
     { name: "Fadli Salto", chance: 0.25 },
     { name: "Si Jomok", chance: 0.1 },
     { name: "Super Fadli", chance: 0.04 },
-    { name: "Padlikin", chance: 0.01 },
+    { name: "Padlikin", chance: 0.00000000000000000001 },
 ];
 
 // Data untuk papan peringkat
