@@ -4,14 +4,32 @@ const rewards = [
     { name: "Fadli Salto", chance: 0.25 },
     { name: "Si Jomok", chance: 0.1 },
     { name: "Super Fadli", chance: 0.04 },
-    { name: "Padlikin", chance: 0.00000000000000000001 },
+    { name: "Padlikin", chance: 0.01 },
 ];
 
 // Data untuk papan peringkat
 let leaderboard = [];
 
+// Uang awal
+let money = 1000000;  // Mulai dengan 1 juta rupiah
+const gachaCost = 50000;  // Biaya setiap kali gacha
+
+// Tampilkan uang awal di tampilan
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("money").innerText = `Uang Anda: Rp${money}`;
+});
+
 // Fungsi gacha
 function gacha() {
+    if (money < gachaCost) {
+        alert("Uang Anda tidak cukup untuk gacha!");
+        return;
+    }
+
+    // Kurangi uang sebesar biaya gacha
+    money -= gachaCost;
+    document.getElementById("money").innerText = `Uang Anda: Rp${money}`;
+
     let random = Math.random();
     let cumulativeChance = 0;
     let selectedReward = null;
